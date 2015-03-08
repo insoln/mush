@@ -15,7 +15,7 @@
 // @match      http://mush.twinoid.com/#
 // jshint multistr: true
 // @require http://code.jquery.com/jquery-latest.js
-// @downloadURL https://raw.githubusercontent.com/insoln/mush/master/MushHacks.js
+// @downloadURL https://raw.githubusercontent.com/insoln/mush/master/MushHacks.user.js
 // ==/UserScript==
 
 GM_addStyle('\
