@@ -8,7 +8,7 @@
 // ==/UserScript==
 // jshint multistr: true
 // @require http://code.jquery.com/jquery-latest.js
-
+// @updateURL https://raw.githubusercontent.com/insoln/mush/master/MushHacks.js
 
 GM_addStyle('\
 .tid_editorContent {visibility: visible}\
