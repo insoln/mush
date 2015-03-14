@@ -20,4 +20,4 @@
 
 GM_addStyle('\
   .tid_editorContent {visibility: visible}\
-'}
+'};
