@@ -8,7 +8,7 @@
 
 // ==UserScript==
 // @name       MushHacks
-// @version    0.01
+// @version    0.02
 // @grant      GM_xmlhttpRequest
 // @grant      GM_addStyle
 // @match      http://mush.twinoid.com/*
