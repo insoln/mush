@@ -1,11 +1,13 @@
 // ==UserScript==
 // @name         Mush Casting Dashboard
-// @namespace    http://your.homepage/
+// @namespace    http://www.kremlin.ru/
 // @version      0.1
 // @description  Mush Casting Dashboard
 // @author       Innokentiy
 // @match        http://mush.twinoid.com/g/leprosorium/center
 // @grant        none
+// @downloadURL https://raw.githubusercontent.com/insoln/mush/master/MushCastingDashboard.user.js
+
 // ==/UserScript==
 
 function startScript() {
