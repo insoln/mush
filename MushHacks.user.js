@@ -8,7 +8,7 @@
 
 // ==UserScript==
 // @name       MushHacks
-// @version    0.02
+// @version    0.03
 // @grant      GM_xmlhttpRequest
 // @grant      GM_addStyle
 // @match      http://mush.twinoid.com/*
@@ -18,4 +18,4 @@
 // @downloadURL https://raw.githubusercontent.com/insoln/mush/master/MushHacks.user.js
 // ==/UserScript==
 
-GM_addStyle(".tid_editorContent {visibility: visible}");
+GM_addStyle(".tid_editorContent {visibility: visible;}");
