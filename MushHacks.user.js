@@ -18,6 +18,4 @@
 // @downloadURL https://raw.githubusercontent.com/insoln/mush/master/MushHacks.user.js
 // ==/UserScript==
 
-GM_addStyle('\
-  .tid_editorContent {visibility: visible}\
-'};
+GM_addStyle(".tid_editorContent {visibility: visible}");
