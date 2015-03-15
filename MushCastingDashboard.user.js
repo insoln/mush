@@ -1,8 +1,7 @@
 // ==UserScript==
 // @name         Mush Casting Dashboard
-// @namespace    http://www.kremlin.ru/
-// @version      0.4
-// @description  Mush Casting Dashboard
+// @version      0.5
+// @description  Позволяет получить список участников кастинга в табличной форме с указанием текущего статуса и номера последнего завершенного корабляю
 // @author       Innokentiy
 // @include     http://mush.twinoid.com/g/leprosorium/center
 // @include     http://mush.twinoid.com/g/leprosorium
