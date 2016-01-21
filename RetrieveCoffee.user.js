@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Кофедоставатель
-// @version      0.3
+// @version      0.4
 // @description  Дежурный по эскалатору справок не дает!
 // @author       Innokentiy
 // @match        http://mush.twinoid.com/
@@ -16,8 +16,8 @@ function RetrieveCoffee() {
             $.get($('.roomItemActions').children().filter(function(index){if ($(this).attr("onmouseover").indexOf("Coffee!")>=0) return true;}).find("a").attr("href"),function(data) {});
         }
     }
-    setTimeout(RetrieveCoffee,3600000);
+    setTimeout(RetrieveCoffee,7200000);
 }
 
-alert('Кофедоставатель будет пытаться доставать кофе каждый час, начиная со следующего цикла');
+console.log('Кофедоставатель будет пытаться доставать кофе каждый час, начиная со следующего цикла');
 RetrieveCoffee();
