@@ -4,7 +4,7 @@
 // @description  Дежурный справок не дает!
 // @author       Innokentiy
 // @match        http://mush.twinoid.com/
-// @downloadURL  https://raw.githubusercontent.com/insoln/mush/master/MushHacks.user.js
+// @downloadURL  https://raw.githubusercontent.com/insoln/mush/master/RetrieveCoffee.user.js
 // @grant        none
 // ==/UserScript==
 /* jshint -W097 */
