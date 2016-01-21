@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Кофедоставатель
-// @version      0.1
+// @version      0.2
 // @description  Дежурный справок не дает!
 // @author       Innokentiy
 // @match        http://mush.twinoid.com/
