@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Кофедоставатель
-// @version      0.2
+// @version      0.3
 // @description  Дежурный по эскалатору справок не дает!
 // @author       Innokentiy
 // @match        http://mush.twinoid.com/
