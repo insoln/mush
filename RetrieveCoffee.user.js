@@ -2,7 +2,7 @@
 // @name         Mush: 16 coffees, please!
 // @version      0.5
 // @description  Automatically retrieves coffee on cycle change if you're in refectory.
-// @author       Innokentiy
+// @author       Innokentiy (insoln@ya.ru)
 // @match        http://mush.twinoid.com/
 // @downloadURL  https://raw.githubusercontent.com/insoln/mush/master/RetrieveCoffee.user.js
 // @grant        none
