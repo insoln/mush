@@ -15,10 +15,10 @@ function RetrieveCoffee() {
         $.get($('.roomItemActions').children().filter(function(index){ return $(this).attr("onmouseover").indexOf("Coffee!")>=0; }).find("a").attr("href"),function(data) {
             // Callback for GET response
             div_response.html(data);
-            if (div_response.find('.cdChatPack:first').children('.cdContent').find(".what_happened:contains("+$('.who').html().trim()+' primes the machine.'+")").length>0) { // Check for log
+            if (div_response.find('.cdChatPack:first').children('.cdContent').find(".what_happened:contains("+$('.who').text().trim()+' primes the machine.'+")").length>0) { // Check for log
                 // Coffee retrieved by me in this cycle
                 $('.cdFavWall .unit').each(function(){
-                    if($(this).find(".mainsaid").html().search(/(coffee|кофе|food|еда|refectory|кухня)/i) != -1){
+                    if($(this).find(".mainsaid").html().search(/(coffee|кофе|food|еда|refectory|кухня|kitchen)/i) != -1){
                         Main.ajaxChat("/wallReply?k=" + $(this).data("k") + "&msg=" + encodeURIComponent(div_response.find('.cycletime').text().trim().replace(/Day (\d{1,2}) - Cycle (\d)/,"D$1C$2")+": Coffee retrieved"));
                         return false;
                     }
