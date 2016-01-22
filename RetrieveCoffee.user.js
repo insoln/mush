@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Mush: 16 coffees, please!
-// @version      0.5
+// @version      0.6
 // @description  Automatically retrieves coffee on cycle change if you're in refectory.
 // @author       Innokentiy (insoln@ya.ru)
 // @match        http://mush.twinoid.com/
