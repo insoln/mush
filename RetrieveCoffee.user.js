@@ -12,6 +12,7 @@
 
 function RetrieveCoffee() {
     if ($('#input').attr('d_name')=='Refectory') {
+        // We're in the kitchen. Sending GET request to "?action=RETRIEVE_COFFEE&params=<something>"
         $.get($('.roomItemActions').children().filter(function(index){ return $(this).attr("onmouseover").indexOf("Coffee!")>=0; }).find("a").attr("href"),function(data) {
             // Callback for GET response
             div_response.html(data);
@@ -31,9 +32,9 @@ function RetrieveCoffee() {
     var re=/((\d{1,2})h)?(\d{2})m(\d{2})s/;
     var str_timeToCycle=div_response.find('.cdTimeStamp').text();
     var num_timeToCycle = str_timeToCycle.replace(re,"$2")*3600+str_timeToCycle.replace(re,"$3")*60+str_timeToCycle.replace(re,"$4")*1;
-    setTimeout(RetrieveCoffee,(num_timeToCycle+5)*1000);
+    setTimeout(RetrieveCoffee,(num_timeToCycle+30)*1000);
 }
 
 var div_response = jQuery('<div/>', {id: 'mush_coffee_handler'});
 console.log('Coffee retriever activated');
-setTimeout(RetrieveCoffee,Main.tData.timeToCycle - (new Date()).getTime() + Main.tData.clientNow.getTime() + 5000);
+setTimeout(RetrieveCoffee,Main.tData.timeToCycle - (new Date()).getTime() + Main.tData.clientNow.getTime() + 30000);
