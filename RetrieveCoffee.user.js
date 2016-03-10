@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Mush: 16 coffees, please!
-// @version      0.7
+// @version      0.8
 // @description  Automatically retrieves coffee on cycle change if you're in refectory.
 // @author       Innokentiy (insoln@ya.ru)
 // @match        http://mush.twinoid.com/
@@ -31,7 +31,7 @@ function RetrieveCoffee() {
                 // Coffee retrieved by me in this cycle
                 $('.cdFavWall .unit').each(function(){
                     if($(this).find(".mainsaid").html().search(/(coffee|кофе|food|еда|refectory|кухня)/i) != -1){
-                        //Main.ajaxChat("/wallReply?k=" + $(this).data("k") + "&msg=" + encodeURIComponent(div_response.find('.cycletime').text().trim().replace(/Day (\d{1,2}) - Cycle (\d)/,"D$1C$2")+": Coffee retrieved"));
+                        Main.ajaxChat("/wallReply?k=" + $(this).data("k") + "&msg=" + encodeURIComponent(div_response.find('.cycletime').text().trim().replace(/Day (\d{1,2}) - Cycle (\d)/,"D$1C$2")+": Coffee retrieved"));
                         return false;
                     }
                 });
