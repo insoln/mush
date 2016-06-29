@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mush Linkify
 // @namespace    http://www.networkeducation.ru/
-// @version      0.2
+// @version      0.3
 // @description  Converts text links to hyperlinks
 // @author       Innokentiy
 // @match        http://mush.twinoid.com/*
