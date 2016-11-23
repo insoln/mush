@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Mush Casting Dashboard
-// @version      0.5
+// @version      0.6
 // @description  Позволяет получить список участников кастинга в табличной форме с указанием текущего статуса и номера последнего завершенного корабляю
 // @author       Innokentiy
 // @include     http://mush.twinoid.com/g/leprosorium/center
@@ -30,7 +30,7 @@ function startScript() {
         response = req.responseText;
         var el1 = document.createElement( 'div' );
         el1.innerHTML = response;
-        txt=txt+"<td>"+el1.getElementsByClassName("butmini")[0].getAttribute("href").substring(8,12)+"</td>";
+        txt=txt+"<td>"+el1.getElementsByClassName("butmini")[0].getAttribute("href").substring(8,13)+"</td>";
         txt=txt + "</tr>";
     }
 
