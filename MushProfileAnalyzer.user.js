@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Mush Profile Analyser
 // @namespace   Mush Profile Analyser
-// @description  Позволяет получить список участников кастинга в табличной форме с указанием текущего статуса и номера последнего завершенного корабляю
-// @author       Innokentiy
+// @description Adds some statistics to Mush user profile 
+// @author      Innokentiy
 // @description Analyses the profile of a Mush player
 // @include     http://mush.twinoid.com/u/profile/*
 // @include     http://mush.twinoid.com/me
