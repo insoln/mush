@@ -13,8 +13,7 @@ var $ = unsafeWindow.jQuery;
 function getUserCycles(character){
     var totalCycles=0;
     var cycles=$("#myDialog_"+character).find("table.histr").find("tr:last-child").find("td:last-child").find("li:contains(Cycle)").each(function (i,el) {totalCycles+=(parseInt(el.innerText.substring(0,el.innerText.indexOf(' '))));}).length;
-    var isMush = cycles===0?false:$("#myDialog_"+character).find("table.histr").find("tr:last-child").find("td:last-child").find("li:contains(Cycle):last")[0].innerText.indexOf('Mush')!=-1;
-    return isMush?"Mush":(totalCycles/8|0)+" days "+(totalCycles%8)+ " cycles";
+    return (totalCycles/8|0)+" days "+(totalCycles%8)+ " cycles";
 }
 
 $(".dude").find("h3").each(function (i,el) {
@@ -23,5 +22,6 @@ $(".dude").find("h3").each(function (i,el) {
 });
 $(".boxextra").find("h3").each(function (i,el) {
     const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
-    row.appendTo(el);
+    var isMush = $(el).parent().find(".scoremush").length>0;
+    if (!isMush) {row.appendTo(el);}
 });
