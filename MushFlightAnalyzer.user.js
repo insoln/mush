@@ -18,7 +18,8 @@ function getUserCycles(character){
 
 $(".dude").find("h3").each(function (i,el) {
     const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
-    row.appendTo(el);
+    var isMush = $(el).parent().find(".scoremush").length>0;
+    if (!isMush) {row.appendTo(el);}
 });
 $(".boxextra").find("h3").each(function (i,el) {
     const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
