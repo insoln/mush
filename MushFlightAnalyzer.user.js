@@ -17,12 +17,13 @@ function getUserCycles(character){
 }
 
 $(".dude").find("h3").each(function (i,el) {
+    debugger;
     const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
-    var isMush = $(el).parent().find(".scoremush").length>0;
+    var isMush = $(el)[0].style.color=="rgb(255, 64, 89)";
     if (!isMush) {row.appendTo(el);}
 });
 $(".boxextra").find("h3").each(function (i,el) {
     const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
-    var isMush = $(el).parent().find(".scoremush").length>0;
+    var isMush = $(el)[0].style.color=="rgb(255, 64, 89)";
     if (!isMush) {row.appendTo(el);}
 });
