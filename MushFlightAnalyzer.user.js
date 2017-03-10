@@ -4,7 +4,7 @@
 // @author      Innokentiy
 // @description Analyses a Mush flight
 // @include     http://mush.twinoid.com/theEnd/*
-// @version     0.1
+// @version     0.2
 // @downloadURL https://raw.githubusercontent.com/insoln/mush/master/MushFlightAnalyzer.user.js
 // ==/UserScript==
 
@@ -16,14 +16,8 @@ function getUserCycles(character){
     return (totalCycles/8|0)+" days "+(totalCycles%8)+ " cycles";
 }
 
-$(".dude").find("h3").each(function (i,el) {
-    debugger;
-    const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
+$(".dude,.boxextra").find("h3").each(function (i,el) {
     var isMush = $(el)[0].style.color=="rgb(255, 64, 89)";
-    if (!isMush) {row.appendTo(el);}
-});
-$(".boxextra").find("h3").each(function (i,el) {
-    const row = $('<div>').append(getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
-    var isMush = $(el)[0].style.color=="rgb(255, 64, 89)";
-    if (!isMush) {row.appendTo(el);}
+    const row = $('<div>').append(isMush?"Hive has no limits":getUserCycles(el.innerText.substring(0,el.innerText.indexOf('\n')).toUpperCase().replace(' ','_').replace('-','_').replace(' ','_')));
+    row.appendTo(el);
 });
