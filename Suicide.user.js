@@ -35,5 +35,4 @@ function PullTheTrigger() {
     }
 }
 console.log('Suicider activated');
-//var div_response = jQuery('<div/>', {id: 'mush_suicide_handler'});
 setTimeout(PullTheTrigger,5000);
