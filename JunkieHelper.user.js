@@ -30,7 +30,7 @@ function onlyBeforeCoffee(what){
 }
 
 function favReport(thread, text){
-    var coffeeThreadID = $(".cdFavWall .mainsaid:contains('Кофе')").parents('.unit').data('k');
+    var coffeeThreadID = $(".cdFavWall .mainsaid:contains('"+thread+"')").parents('.unit').data('k');
     if(coffeeThreadID!=undefined) Main.ajaxChat("/wallReply?k=" + coffeeThreadID + "&msg=" + encodeURIComponent(text));
 }
 
