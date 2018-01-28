@@ -6,7 +6,7 @@ Automatically retrieves coffee on cycle change. Could use an apron or a sofa if 
 
 **This script is only intended for casting ships, it's not allowed to use it in public ships.**
 
-This script is heavily based on <a href="http://mush.twinoid.com/u/profile/7962121">Volcher</a>'s one.
+This script is an improved version of <a href="http://mush.twinoid.com/u/profile/7962121">Volcher</a>'s one.
 
 ## <a href="https://github.com/insoln/mush/raw/master/MushFlightAnalyzer.user.js">Mush Flight Analyzer</a>
 Adds some nice statistics to the flight page. Specifically, it shows how many cycles human characters spent on board.
