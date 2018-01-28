@@ -43,7 +43,7 @@ function JunkieHelper(){ // Yeah, i know how fucked up execution flow looks...
     if(coffee !== null){
         if(!tryButton("APRON", "Pick up")){
             coffee.click();
-            favReport(/(coffee|кофе|food|еда|refectory|кухня)/i, $('.cycletime').text().replace(/[^DC0-9]/g, "")+": Coffee retrieved");
+            favReport("Кофе", $('.cycletime').text().replace(/[^DC0-9]/g, "")+": Кофе вытащен");
         }
     } else {
         var curHero = $("h1.who").text().trim();
