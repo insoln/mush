@@ -22,6 +22,13 @@ function tryButton(item, string){
     } else return false;
 }
 
+function onlyBeforeCoffee(what){
+    var coffeeTakenLog = $(".cdChatPack:first div.cdChatLine:contains('"+$("h1.who").text().trim()+" has knocked over the Coffee.')");
+    var beforeCoffee = coffeeTakenLog.nextAll("div:contains('"+what+"')").length>0;
+    var afterCoffee = coffeeTakenLog.prevAll("div:contains('"+what+"')").length>0;
+    return beforeCoffee&&!afterCoffee;
+}
+
 function favReport(thread, text){
     var coffeeThreadID = $(".cdFavWall .mainsaid:contains('Кофе')").parents('.unit').data('k');
     if(coffeeThreadID!=undefined) Main.ajaxChat("/wallReply?k=" + coffeeThreadID + "&msg=" + encodeURIComponent(text));
@@ -39,8 +46,9 @@ function JunkieHelper(){ // Yeah, i know how fucked up execution flow looks...
             favReport(/(coffee|кофе|food|еда|refectory|кухня)/i, $('.cycletime').text().replace(/[^DC0-9]/g, "")+": Coffee retrieved");
         }
     } else {
-        if ($(".cdChatPack:first").find("div.what_happened:contains('"+$("h1.who").text().trim()+" wakes up calmly...')").length>0) tryButton("SOFA", "Lie Down");
-        if ($(".cdChatPack:first").find("div.what_happened:contains('"+$("h1.who").text().trim()+" has picked up the Stainproof Apron.')").length>0) tryButton("APRON", "Drop");
+        var curHero = $("h1.who").text().trim();
+        if (onlyBeforeCoffee(curHero+" wakes up calmly...")) tryButton("SOFA", "Lie Down");
+        if (onlyBeforeCoffee(curHero+" has picked up the Stainproof Apron.")) tryButton("APRON", "Drop");
     }
     setTimeout(JunkieHelper, 5000);
 }
