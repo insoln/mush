@@ -23,7 +23,7 @@ function tryButton(item, string){
 }
 
 function onlyBeforeCoffee(what){
-    var coffeeTakenLog = $(".cdChatPack:first div.cdChatLine:contains('has knocked over the Coffee.')");
+    var coffeeTakenLog = $(".cdChatPack:first div.cdChatLine:contains('It smells like a warm morning on a terrace on Venus. Coffee!')");
     var beforeCoffee = coffeeTakenLog.nextAll("div:contains('"+what+"')").length>0;
     var afterCoffee = coffeeTakenLog.prevAll("div:contains('"+what+"')").length>0;
     return beforeCoffee&&!afterCoffee;
